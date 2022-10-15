@@ -1,0 +1,164 @@
+body {
+  background-image: url('/bgImage.png');
+  background-size: cover;
+  background-position: start;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #292929;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.App{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+
+}
+
+.checkbox-round {
+    width: 1.3em;
+    height: 1.3em ;
+    background-color: white;
+    border-radius: 75%;
+    vertical-align: middle;
+    border: 1px solid #D27067;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-round:checked {
+    background-color: #D27067 ;
+}
+.todos{
+  background-color: #ECDEDA;
+  border-radius: 10px;
+  width: 700px;
+  margin:auto;
+  border: 4px solid #D27067;
+}
+.enter-todo {
+  background-color: #ECDEDA;
+  max-width: 80%;
+  margin:auto;
+  border:none;
+}
+.enter-todo:focus {
+  outline: none;
+}
+.new-todo {
+  margin:auto;
+  border:none;
+  border-bottom: 2px solid #D27067;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+.todo-list {
+  background-color: #ECDEDA;
+  width: 700px;
+  margin:auto;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+}
+
+.todo-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 7px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #D27067;
+  min-width: 80%;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.todo-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.todo-info-buttons button {
+  background-color: #D27067;
+  border: #D27067;
+  border-radius: 10px;
+  margin: 0 5px;
+  padding: 2px 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.delete-button {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: transparent;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    color: #D27067;
+    font-weight: bolder;
+}
+.todo-info button, header button {
+  background-color: #D27067;
+  border: #D27067;
+  border-radius: 10px;
+  padding: 2px 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.todo-info-buttons button:hover, .todo-info button:hover {
+  background-color: #B5D3A9;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url('/bgImageMobile.png');
+    background-size: auto;
+  }
+  .todos, .todo-list {
+    width: 80%;
+  }
+  .todo-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .todo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+  }
+  .new-todo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 5px;
+  }
+  
+}
